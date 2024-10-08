@@ -164,12 +164,20 @@
     <section id="contact">
         <div class="contact-section">
             <h2>Contact Me</h2>
-            <input type="text" placeholder="Name:" required>
-            <input type="email" placeholder="Email:" required>
-            <textarea placeholder="Message:" required></textarea>
-            <button type="submit">Send Message</button>
+            <form action="mailto:pavlygeorge25@gmail.com" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required> <br>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required> <br>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea> <br>
+        
+                <button type="submit">Send Message</button>
+            </form>
             <div>
-                <p>Connect with me: <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+                <p>Connect with me: <a href="https://www.linkedin.com/in/pavly-george/">LinkedIn</a>
                 <p>Phone: +201278914108</p>
             </div>
         </div>
