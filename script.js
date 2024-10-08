@@ -70,6 +70,21 @@ function animateSections() {
         }
     });
 }
+function sendEmail() {
+    // Gather form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Create mailto link
+    const mailtoLink = `mailto:pavlygeorge25@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+    // Open the default email client
+    window.location.href = mailtoLink;
+
+    // Prevent the form from submitting normally
+    return false;
+}
 
 // Trigger animation on scroll and load
 window.addEventListener('scroll', animateSections);
