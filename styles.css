@@ -1,0 +1,480 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap');
+
+/* Background Image for Body */
+body {
+    background: url('./images/A_futuristic_server_room_with_glowing_neon_lights.png') no-repeat center center fixed; /* Add your background image */
+    background-size: cover; /* Cover the entire screen */
+    font-family: 'Roboto', sans-serif; /* Clean and modern font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Improved line height */
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* Animation Styles for Fade-In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+    }
+}
+
+.section {
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 0.8s ease forwards; /* Apply fade-in animation */
+}
+
+/* Add delay to each section */
+.section:nth-child(1) { animation-delay: 0.2s; }
+.section:nth-child(2) { animation-delay: 0.4s; }
+.section:nth-child(3) { animation-delay: 0.6s; }
+.section:nth-child(4) { animation-delay: 0.8s; }
+.section:nth-child(5) { animation-delay: 1s; }
+
+/* Hover effect for sections */
+section {
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+section:hover {
+    box-shadow: 0 4px 20px rgba(0, 255, 238, 0.5); /* Add a glowing shadow effect */
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(to right, #00FF66, #1abc9c); /* Attractive gradient */
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+header h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-container h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.header-container p {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 2px; /* Spacing between letters */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between menu items */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(15, 7, 7, 0.2); /* Semi-transparent hover effect */
+}
+
+/* About Me Section */
+#about {
+    background-color:rgba(0, 0, 0, 0.614); /* Slight transparency for overlay effect */
+    color: #e0e0e0;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.8em;
+    color: #00FF66;
+    margin-bottom: 20px;
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #00FF66;
+    color: #1f1f1f;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid #1abc9c; /* Adding a border to button */
+}
+
+.about-btn:hover {
+    background-color: #1abc9c;
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+/* About Me Image */
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Skills & Certifications */
+#skills {
+    padding: 20px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around; /* Space categories evenly */
+    flex-wrap: wrap; /* Allow categories to wrap on smaller screens */
+}
+
+.skill-category {
+    background-color: #2a2a2a; /* Dark background for skill categories */
+    border: 2px solid #00FF66; /* Green border */
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px; /* Space between categories */
+    width: 220px; /* Fixed width for uniformity */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+}
+
+.skill-category:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 20px rgba(0, 255, 238, 0.5); /* Glowing shadow on hover */
+}
+
+.skill-category h3 {
+    color: #00FF66; /* Green color for category titles */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.skill-category ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+.skill-category li {
+    color: #ffffff; /* White text for skills */
+    margin: 5px 0; /* Space between skills */
+    text-align: center; /* Center-align skills */
+}
+
+/* Projects Section */
+.project {
+    background-color: #2a2a2a; /* Dark background */
+    border: 2px solid #00FF66; /* Green border */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s ease-in-out; /* Smooth hover transition */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Initial shadow */
+}
+
+.project:hover {
+    transform: scale(1.05); /* Slight scale-up on hover */
+    box-shadow: 0 8px 20px rgba(0, 255, 238, 0.7); /* Larger glowing shadow on hover */
+}
+
+/* Project Images */
+.project-img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for image hover */
+}
+
+/* Hover Effect for Project Images */
+.project-img:hover {
+    transform: scale(1.1); /* Slight scale-up of image on hover */
+}
+
+/* Project Titles */
+.project h3 {
+    color: #00FF66;
+    margin-bottom: 10px;
+}
+
+/* Project Descriptions */
+.project p {
+    color: #ffffff;
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+
+/* Button Styles */
+.details-btn {
+    background-color: #00FF66;
+    color: #1e1e1e;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #1abc9c; /* Change button color on hover */
+}
+
+/* Learning Journey Section */
+#learning-journey {
+    padding: 40px;
+    text-align: center;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+#learning-journey h2 {
+    font-size: 2.5em;
+    color: #00FF66;
+    margin-bottom: 20px;
+}
+
+.journey {
+    background-color: #2a2a2a;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.journey:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 255, 238, 0.7);
+}
+
+.journey h3 {
+    color: #00FF66;
+    margin-bottom: 10px;
+}
+
+.journey p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+#contact {
+    background-image: url('./images/A_futuristic_server_room_with_glowing_neon_lights.png'); /* Update the path to your image */
+    background-size: cover;
+    background-position: center;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #00FF66; /* Green border */
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+button {
+    background-color: #00FF66; /* Green button */
+    color: #1e1e1e;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1ec1a6; /* Darker green on hover */
+}
+#contact-form {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#contact-form h2 {
+    text-align: center;
+}
+.contact-section {
+    background-color:  #1f1f1fcc; /* Change to your desired solid color */
+    padding: 50px; /* Adjust padding as needed */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+    margin: 20px; /* Add some margin for spacing */
+}
+
+.contact-section input,
+.contact-section textarea {
+    background-color: #f5f5f5; /* Light gray for input fields */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 4px; /* Rounded corners for input fields */
+    padding: 10px; /* Padding for input fields */
+    width: calc(100% - 20px); /* Full width minus padding */
+    margin-bottom: 15px; /* Spacing between fields */
+}
+
+.contact-section button {
+    background-color: #00ff00; /* Green background for button */
+    color: #ffffff; /* White text */
+    border: none; /* No border */
+    padding: 15px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.contact-section button:hover {
+    background-color: #1abc9c;
+    transform: translateY(-5px); /* Darker green on hover */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Button Styles */
+button {
+    background-color: #00FF66;
+    color: #1e1e1e;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00cc00;
+}
+
+/* Placeholder Styles */
+input::placeholder, textarea::placeholder {
+    color: #ccc;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    #contact-form {
+        padding: 15px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px;
+    } 
+}
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em; /* Adjust header size for smaller screens */
+    }
+    .about-container {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center; /* Center the content */
+    }
+    .about-image img {
+        width: 250px; /* Smaller image on small screens */
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+    justify-content: center; /* Centering */
+    align-items: center; /* Centering */
+}
+
+.modal-content {
+    background-color: #2a2a2a;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #00FF66; /* Green border */
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #00FF66; /* Green color on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
