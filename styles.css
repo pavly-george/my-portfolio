@@ -28,12 +28,6 @@ body {
     animation: fadeIn 0.8s ease forwards; /* Apply fade-in animation */
 }
 
-/* Add delay to each section */
-.section:nth-child(1) { animation-delay: 0.2s; }
-.section:nth-child(2) { animation-delay: 0.4s; }
-.section:nth-child(3) { animation-delay: 0.6s; }
-.section:nth-child(4) { animation-delay: 0.8s; }
-.section:nth-child(5) { animation-delay: 1s; }
 
 /* Hover effect for sections */
 section {
@@ -51,6 +45,7 @@ header {
     padding: 50px 0;
     text-align: center;
 }
+
 header h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -95,7 +90,7 @@ nav ul li a:hover {
 
 /* About Me Section */
 #about {
-    background-color:rgba(0, 0, 0, 0.614); /* Slight transparency for overlay effect */
+    background-color: rgba(0, 0, 0, 0.614); /* Slight transparency for overlay effect */
     color: #e0e0e0;
     padding: 60px 20px;
     display: flex;
@@ -237,7 +232,6 @@ nav ul li a:hover {
     margin-bottom: 15px;
 }
 
-
 /* Button Styles */
 .details-btn {
     background-color: #00FF66;
@@ -293,133 +287,96 @@ nav ul li a:hover {
 
 /* Contact Section */
 #contact {
-    background-image: url('./images/A_futuristic_server_room_with_glowing_neon_lights.png'); /* Update the path to your image */
-    background-size: cover;
-    background-position: center;
+    background-color: rgba(30, 30, 30, 0.9); /* Dark background for contrast */
+    padding: 40px; /* Adequate padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    max-width: 600px; /* Max width for better layout */
+    margin: 0 auto; /* Center the section */
 }
 
-
-form {
+.contact-section {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+#contact h2 {
+    text-align: center;
+    color: #00FF66; /* Green color for the heading */
+    margin-bottom: 20px; /* Space below heading */
 }
 
 label {
-    margin-bottom: 5px;
+    margin-bottom: 5px; /* Space below label */
+    color: #ffffff; /* White text for labels */
 }
 
 input, textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #00FF66; /* Green border */
-    background-color: #1e1e1e;
-    color: #ffffff;
+    margin-bottom: 20px; /* Increased bottom margin for spacing */
+    padding: 12px; /* Increased padding for input fields */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #00FF66; /* Green border */
+    background-color: #1e1e1e; /* Dark background for inputs */
+    color: #ffffff; /* White text for inputs */
+    font-size: 16px; /* Font size for better readability */
+    transition: border-color 0.3s; /* Transition for border color */
 }
 
-button {
-    background-color: #00FF66; /* Green button */
-    color: #1e1e1e;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+input:focus, textarea:focus {
+    border-color: #1abc9c; /* Change border color on focus */
 }
 
-button:hover {
-    background-color: #1ec1a6; /* Darker green on hover */
-}
-#contact-form {
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 500px;
-    margin: auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-#contact-form h2 {
-    text-align: center;
-}
-.contact-section {
-    background-color:  #1f1f1fcc; /* Change to your desired solid color */
-    padding: 50px; /* Adjust padding as needed */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
-    margin: 20px; /* Add some margin for spacing */
-}
-
-.contact-section input,
-.contact-section textarea {
-    background-color: #f5f5f5; /* Light gray for input fields */
-    border: 1px solid #ccc; /* Border for input fields */
-    border-radius: 4px; /* Rounded corners for input fields */
-    padding: 10px; /* Padding for input fields */
-    width: calc(100% - 20px); /* Full width minus padding */
-    margin-bottom: 15px; /* Spacing between fields */
-}
-
-.contact-section button {
-    background-color: #00ff00; /* Green background for button */
-    color: #ffffff; /* White text */
-    border: none; /* No border */
-    padding: 15px; /* Padding for the button */
-    border-radius: 5px; /* Rounded corners for the button */
-    cursor: pointer; /* Pointer cursor on hover */
-}
-
-.contact-section button:hover {
-    background-color: #1abc9c;
-    transform: translateY(-5px); /* Darker green on hover */
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    font-size: 16px;
-}
-
-/* Button Styles */
-button {
-    background-color: #00FF66;
-    color: #1e1e1e;
-    border: none;
-    border-radius: 5px;
-    padding: 15px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #00cc00;
+textarea {
+    height: 100px; /* Set a fixed height for the textarea */
 }
 
 /* Placeholder Styles */
 input::placeholder, textarea::placeholder {
-    color: #ccc;
+    color: #ccc; /* Lighter color for placeholder text */
+}
+
+/* Button Styles */
+button {
+    background-color: #00FF66; /* Green button */
+    color: #1e1e1e;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px; /* Font size for better readability */
+}
+
+button:hover {
+    background-color: #1abc9c; /* Darker green on hover */
+}
+
+/* Contact Info Styles */
+.contact-info {
+    text-align: center; /* Center the information */
+    margin-top: 20px; /* Space above contact info */
+    color: #ffffff; /* White text for contact info */
+}
+
+.contact-info a {
+    color: #00FF66; /* Green links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Transition for link color */
+}
+
+.contact-info a:hover {
+    color: #1abc9c; /* Change color on hover */
 }
 
 /* Responsive Styles */
 @media (max-width: 600px) {
-    #contact-form {
-        padding: 15px;
+    #contact {
+        padding: 20px; /* Adjust padding on smaller screens */
     }
-
-    input, textarea {
-        font-size: 14px;
-    }
-
-    button {
-        padding: 12px;
-    } 
 }
+
+
+
 /* Footer Section */
 footer {
     text-align: center;
