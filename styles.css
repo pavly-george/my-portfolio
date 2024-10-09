@@ -411,6 +411,98 @@ footer {
         width: 250px; /* Smaller image on small screens */
     }
 }
+/* General Responsive Layout for Smaller Screens */
+@media only screen and (max-width: 768px) {
+    /* Adjust container widths and font sizes for mobile */
+    .contact-section {
+        padding: 20px;
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    /* Adjust Heading Size */
+    h2 {
+        font-size: 1.8em; /* Slightly smaller heading */
+    }
+
+    /* Inputs and Textareas */
+    input, textarea {
+        font-size: 14px; /* Slightly smaller font */
+        padding: 10px; /* Smaller padding */
+    }
+
+    /* Adjust Button */
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Adjust layout for About Section */
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .about-image img {
+        width: 200px; /* Smaller image for mobile */
+    }
+
+    /* Adjust Navigation */
+    nav ul {
+        flex-direction: column;
+        gap: 15px; /* Smaller gaps between menu items */
+    }
+
+    nav ul li {
+        display: block; /* Stack navigation links vertically */
+    }
+
+    /* Adjust Projects Section */
+    .project-img {
+        max-width: 100%; /* Make images full width on smaller screens */
+    }
+
+    /* Adjust other section paddings */
+    section {
+        padding: 20px 10px;
+    }
+}
+
+/* For extra small screens (iPhones and small Android phones) */
+@media only screen and (max-width: 480px) {
+    h2 {
+        font-size: 1.6em; /* Smaller heading for very small screens */
+    }
+
+    /* Adjust text and padding for inputs and buttons */
+    input, textarea {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .about-image img {
+        width: 150px; /* Smaller image */
+    }
+
+    nav ul {
+        gap: 10px; /* Reduce gap further between menu items */
+    }
+
+    .contact-section {
+        padding: 15px;
+    }
+
+    /* Project Section Adjustments */
+    .project {
+        padding: 15px;
+        margin: 15px 0;
+    }
+}
 
 /* Modal Styles */
 .modal {
