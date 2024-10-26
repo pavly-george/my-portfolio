@@ -4,8 +4,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif; /* Clean and modern font */
-    margin: 0;
-    padding: 0;
     line-height: 1.6; /* Improved line height */
     color: #000000;
 }
@@ -71,8 +69,10 @@ ul li {
 }
 
 /* Back Button Styling */
+/* Back Button Styling */
 .back-btn {
     display: inline-block;
+    margin: 20px auto; /* Center horizontally */
     padding: 10px 20px;
     background-color: #3498db;
     color: #fff;
@@ -80,10 +80,20 @@ ul li {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    text-align: center; /* Center the text horizontally */
+    vertical-align: middle; /* Center the text vertically */
+    line-height: 1.6; /* Adjust line height for vertical centering */
 }
 
 .back-btn:hover {
     background-color: #2980b9;
+}
+
+/* Ensure the parent container allows centering */
+.parent-container {
+    display: flex;
+    justify-content: center;
+
 }
 
 /* Responsive Design */
@@ -102,6 +112,7 @@ ul li {
     }
 
     .back-btn {
-        padding: 8px 16px;
+        width: 80%; /* Adjust width for smaller screens */
+        margin: 20px auto;
     }
 }
