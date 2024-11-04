@@ -43,6 +43,7 @@ header {
     background: linear-gradient(to right, #00FF66, #1abc9c); /* Attractive gradient */
     color: #fff;
     padding: 5px ;
+    padding-bottom: 38px;
     text-align: center;
 }
 
