@@ -52,13 +52,13 @@ header h1 {
 }
 
 .header-container h1 {
-    font-size: 3.5em;
+    font-size: 3.8em;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .header-container p {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: 300;
     margin-bottom: 30px;
     letter-spacing: 2px; /* Spacing between letters */
@@ -79,7 +79,7 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.5em;
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -147,53 +147,111 @@ nav ul li a:hover {
 
 /* Skills & Certifications */
 #skills {
-    background-color: rgba(0, 0, 0, 0.614);
-    padding: 20px;
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.738);
+    text-align: center;
+}
 
+#skills h2 {
+    font-size: 2.8em;
+    color: #00FF66;
+    margin-bottom: 40px;
 }
 
 .skills-container {
     display: flex;
-    justify-content: space-around; /* Space categories evenly */
-    flex-wrap: wrap; /* Allow categories to wrap on smaller screens */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
-
+  
 .skill-category {
-    background-color: #2a2a2a; /* Dark background for skill categories */
-    border: 2px solid #00FF66; /* Green border */
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px; /* Space between categories */
-    width: 220px; /* Fixed width for uniformity */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+    background-color: #2a2a2a;
+    border: 2px solid #00FF66;
+    border-radius: 10px;
+    padding: 25px;
+    width: 300px;
+    min-height: 260px;
+    box-shadow: 0 6px 15px rgba(0, 255, 238, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+  
+  .skill-category.enlarged {
+    width: 320px;
+  }
 
-.skill-category:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 4px 20px rgba(0, 255, 238, 0.5); /* Glowing shadow on hover */
+  .skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 255, 238, 0.4);
 }
 
 .skill-category h3 {
-    color: #00FF66; /* Green color for category titles */
     text-align: center;
-    margin-bottom: 10px;
+    color: #00FF66;
+    margin-bottom: 15px;
+    font-size: 1.5em;
 }
 
 .skill-category ul {
-    list-style-type: none; /* Remove default list styling */
+    list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
+
 .skill-category li {
-    color: #ffffff; /* White text for skills */
-    margin: 5px 0; /* Space between skills */
-    text-align: center; /* Center-align skills */
+    padding: 8px 0;
+    font-size: 1.2em;
+    color: #e0e0e0;
+    text-align: left;
+}
+
+  
+.lang-level {
+    font-weight: bold;
+    color: #1abc9c; /* turquoise professional color */
+  }
+
+  /* Languages Section with Dots */
+.skill-category.languages li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-category.languages .dots {
+    display: flex;
+    gap: 5px;
+}
+
+.skill-category.languages .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #444;
+}
+
+.skill-category.languages .dot.filled {
+    background-color: #00FF66;
 }
 
 /* Projects Section */
-#project{
-     background-color: rgba(0, 0, 0, 0.614);
+#projects {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.868);
+    text-align: center;
 }
+
+#projects h2 {
+    font-size: 2.8em;
+    color: #00FF66;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
 .project {
     background-color: #2a2a2a; /* Dark background */
     border: 2px solid #00FF66; /* Green border */
