@@ -23,11 +23,18 @@
     <header>
         <div class="header-container">
             <h1>Pavly George</h1>
-            <h2 >Telecommunications Engineer | Network Design & Security Specialist</h2>
-            <nav>
+            <h2>Telecommunications Engineer | Network Design & Security Specialist</h2>
+           <div class="hamburger" onclick="toggleMenu(this)">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav id="nav-menu">
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#learning-journey">Learning</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -37,7 +44,7 @@
     </header>
 
     <!-- About Me Section -->
-    <section id="about">
+    <section id="about" class="section">
         <div class="about-container">
             <div class="about-text">
                 <h2>About Me</h2>
@@ -46,13 +53,13 @@
                 <a href="https://drive.google.com/file/d/1Gclohpsru9h7H7HlGAZ3RcqC7FLV7j1C/view?usp=drive_link" class="about-btn" target="_blank" rel="noopener noreferrer">My Resume</a>
             </div>
             <div class="about-image">
-                <img src="images/headshot.png" alt="Pavly George" />
+                <img src="images/Pavly_Graduated_1.jpg" alt="Pavly George" />
             </div>
         </div>
     </section>
 
     <!-- Skills & Certifications Section -->
-    <section id="skills">
+    <section id="skills" class="section">
         <h2>Skills & Certifications</h2>
         <div class="skills-container">
             <div class="skill-category">
@@ -60,6 +67,8 @@
                 <ul>
                     <li>Cisco Certified Network Associate (CCNA)</li>
                     <li>Cisco Certified Network Professional (CCNP)</li>
+                    <li>FortiGate (FGT)</li>
+                    <li>FortiManager (FMG)</li>
                     <li>Microsoft Certified Solutions Associate (MCSA)</li>
                     <li>Microsoft Azure (AZ-900)</li>
                 </ul>
@@ -67,26 +76,20 @@
             <div class="skill-category">
                 <h3>Tools</h3>
                 <ul>
+                    <li>Cisco Packet Tracer</li>
+                    <li>GNS3</li>
+                    <li>PnetLab</li>
                     <li>AutoCAD</li>
                     <li>Revit</li>
-                    <li>Fortinet Technologies</li>
                 </ul>
             </div>
             <div class="skill-category">
-                <h3>Programming</h3>
+                <h3>Programming Languages</h3>
                 <ul>
                     <li>C</li>
                     <li>C++</li>
                     <li>Python</li>
                     <li>MATLAB</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Emulator Programs</h3>
-                <ul>
-                    <li>Cisco Packet Tracer</li>
-                    <li>GNS3</li>
-                    <li>PNETLAB</li>
                 </ul>
             </div>
             <div class="skill-category languages">
@@ -115,7 +118,7 @@
                             <div class="dot filled"></div>
                             <div class="dot filled"></div>
                             <div class="dot filled"></div>
-                            <div class="dot"></div>
+                            <div class="dot filled"></div>
                             <div class="dot"></div>
                         </div>
                     </li>
@@ -134,23 +137,23 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="section">
         <h2>Projects</h2>
 
-        <!-- Project 1: Smart School Infrastructure Design -->
+        <!-- Project 1: Hospital Infrastructure Design -->
         <div class="project">
-            <img src="images/school_project.png" alt="Smart School Infrastructure Design" class="project-img">
-            <h3>Smart School Infrastructure Design</h3>
-            <p>We designed a smart school, specifying the locations for data outlets, telecom rooms (MDF and IDF), and structured the network infrastructure.</p>
-            <a href="smart_school_project.html" class="details-btn">View Details</a>
+            <img src="images/ma4ro3/Final Model_1_1.png" alt="Smart School Infrastructure Design" class="project-img">
+            <h3>Hospital Network Infrastructure</h3>
+            <p>We designed a Hospital Network and Security Infrastructure, specifying the locations for data outlets, telecom rooms (MDF and IDF), and structured the network infrastructure.</p>
+            <a href="Hospital_Network_Infrastructure.html" class="details-btn">View Details</a>
         </div>
 
-        <!-- Project 2: Smart City Infrastructure Design -->
+        <!-- Project 2: Hospital Network Implementation -->
         <div class="project">
-            <img src="images/city_project_main.png" alt="Smart City Infrastructure Design" class="project-img">
-            <h3>Smart City Infrastructure Design</h3>
-            <p>Using AutoCAD, we designed a smart city network integrating fiber optic cables and copper wires for seamless communication and data exchange.</p>
-            <a href="smart_city_project.html" class="details-btn">View Details</a>
+            <img src="images/ma4ro3/Hospital Network/Topology.png" alt="Smart City Infrastructure Design" class="project-img">
+            <h3>Hospital Network Implementation</h3>
+            <p>The practical implementation reflects a real-world, policy-compliant, and performance-optimized infrastructure that meets the needs of a critical healthcare environment.</p>
+            <a href="Network_Implementation.html" class="details-btn">View Details</a>
         </div>
 
         <!-- Project 3: Smart Bank Network Implementation -->
@@ -171,7 +174,7 @@
     </section>
 
     <!-- Learning Journey Section -->
-    <section id="learning-journey">
+    <section id="learning-journey" class="section">
         <h2>My Learning Journey</h2>
 
         <div class="journey">
@@ -208,10 +211,14 @@
             <h3>Learning GNS3 and PNetLab</h3>
             <p>As a hands-on learner, I’ve been using emulator programs like GNS3 and PNetLab to simulate network environments, allowing me to experiment with real-world scenarios.</p>
         </div>
+        <div class="journey">
+            <h3>German Language Course (KOMET Institut)</h3>
+            <p>I am currently enrolled in a German language course sponsored by the Ministry of Communications at KOMET Institut. The course offers certifications from A1 to C1 levels, helping me to improve my proficiency and communication skills in German.</p>
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" >
         <div class="contact-section">
             <h2>Contact Me</h2>
             <form action="https://formspree.io/f/xovdnpno" method="POST">
@@ -233,7 +240,7 @@
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Pavly George - All Rights Reserved.</p>
+        <p>&copy; 2025 Pavly George - All Rights Reserved.</p>
     </footer>
 
     <!-- Modal for Project Details -->

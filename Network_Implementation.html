@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart School Infrastructure Design</title>
+  <link rel="icon" type="image/png" href="images/project-icon-png.png">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('./images/A_futuristic_server_room_with_glowing_neon_lights.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    header {
+      background: linear-gradient(to right, #00cc99, #009973);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .section-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+      background-color: rgba(7, 0, 0, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-container h2 {
+      color: #00aa88;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #00aa88;
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 1.5rem;
+    }
+
+    .project-gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .project-gallery img:hover {
+      transform: scale(1.03);
+    }
+    .back-button:hover {
+      background-color: #008066;
+      transform: translateY(-2px);
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 8px;
+    }
+
+    .lightbox .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .back-button {
+    display: inline-block;
+      margin: 2rem auto 1rem auto;
+      padding: 10px 24px;
+      background-color: #00AA88;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-align: center;
+    }
+
+    .back-button:hover {
+      background-color: #008066;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.75);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Hospital Network Implementation</h1>
+    <p>implementing the secure and scalable Network for the hospital</p>
+  </header>
+
+  <div class="section-container">
+    <h2>Project Overview</h2>
+    <p>This project focused on designing and implementing a secure, scalable, and efficient network infrastructure for a modern hospital spanning three floors. The design supports fast communication, secure data access, and seamless operation across medical, administrative, and guest areas.</p>
+
+    <h2>Key Implementation Areas</h2>
+    <ul>
+      <li>Network Design: Built in PNETLab using Layer 3 switches, VLANs, and HSRP for redundancy.</li>
+      <li>Server Configuration: Implemented MCSA with Active Directory, DHCP, Group Policies, and domain services.</li>
+      <li>Security: Deployed FortiGate firewall with FSSO for internal users and Captive Portal for guests.</li>
+    </ul>
+
+    <h2>Tools Used</h2>
+    <ul>
+      <li>PNETLab for network simulation and topology testing.</li>
+      <li>VMware for virtualized Windows Server setup.</li>
+    </ul>
+
+    <h2>Core Network Topology</h2>
+    <ul>
+      <li>2 Core Switches for inter-VLAN routing and high availability.</li>
+      <li>6 Access Switches distributed across departments and floors.</li>
+      <li>VLAN segmentation for Management, IT, Doctors, Nursing, Finance, Guests, CCTV, and VoIP.</li>
+    </ul>
+
+    <h2>Infrastructure Highlights</h2>
+    <ul>
+      <li>Over 400 data points and structured cabling for devices like PCs, IP phones, and printers.</li>
+      <li>Wi-Fi Access Points deployed based on user density and hospital layout.</li>
+      <li>Domain structure with OUs for role-based access and GPO enforcement.</li>
+      <li>Roaming profiles and home folders for staff mobility.</li>
+    </ul>
+
+    <h2>Security Features</h2>
+    <ul>
+      <li>FortiGate firewall with LDAP-integrated FSSO for internal users.</li>
+      <li>Captive Portal for guest VLAN to ensure safe internet access.</li>
+      <li>Application control, antivirus, and web filtering profiles for network protection.</li>
+    </ul>
+
+    <h2>Network Topology</h2>
+    <div class="project-gallery">
+        <img src="./images/ma4ro3/Hospital Network/Ketab_elmashroo3_Final[1] (1).jpg" alt="Topology" onclick="openLightbox(this.src)">    
+    </div>
+
+    <h2>Configuration on Core Switches</h2>
+    <div class="project-gallery">
+      <img src="./images/ma4ro3/Hospital Network/Network/vlans.png" alt="VLANs" onclick="openLightbox(this.src)">
+      <img src="./images/ma4ro3/Hospital Network/Network/HSRP on core-sw-01.png" alt="HSRP" onclick="openLightbox(this.src)">
+      <img src="./images/ma4ro3/Hospital Network/Network/SVI on core-sw-01.png" alt="SVI" onclick="openLightbox(this.src)">
+      <img src="./images/ma4ro3/Hospital Network/Network/routing table on core-sw-01.png" alt="Routing Table" onclick="openLightbox(this.src)">
+    </div>
+
+    <h2>Server Configurations (AD, GPO, DHCP)</h2>
+    <div class="project-gallery">
+      <img src="./images/ma4ro3/Hospital Network/Server/AD & OUs.png" alt="AD" onclick="openLightbox(this.src)">
+      <img src="./images/ma4ro3/Hospital Network/Server/Group Policies.png" alt="GPO" onclick="openLightbox(this.src)">
+      <img src="./images/ma4ro3/Hospital Network/Server/DHCP Scopes.png" alt="DHCP" onclick="openLightbox(this.src)">
+      <img src="./images/ma4ro3/Hospital Network/Server/FSSO_Agent.png" alt="SVI" onclick="openLightbox(this.src)">
+    </div>
+    
+    <h2>FortiGate Firewall Configurations</h2>
+    <div class="project-gallery">
+      <img src="./images/ma4ro3/Hospital Network/FGT/Dashboard.png" alt="dashboard" onclick="openLightbox(this.src)">
+      <img src="./images/ma4ro3/Hospital Network/FGT/Routing Table.png" alt="RT" onclick="openLightbox(this.src)">
+      <img src="./images/ma4ro3/Hospital Network/FGT/Policies.png" alt="Policies" onclick="openLightbox(this.src)">
+      <img src="./images/ma4ro3/Hospital Network/FGT/Guests-Accounts-Management.png" alt="Guests" onclick="openLightbox(this.src)">
+      <img src="./images/ma4ro3/Hospital Network/FGT/LDAP_Server.png" alt="LDAP_Server" onclick="openLightbox(this.src)">
+      <img src="./images/ma4ro3/Hospital Network/FGT/Web Filter Profile.png" alt="Webfilter" onclick="openLightbox(this.src)">
+      <img src="./images/ma4ro3/Hospital Network/FGT/Antivirus_profile.png" alt="Antivirus" onclick="openLightbox(this.src)">
+      <img src="./images/ma4ro3/Hospital Network/FGT/Application_control Profile.png" alt="Application Control" onclick="openLightbox(this.src)">
+    </div>
+
+  <h2>End devices Test</h2>
+    <div class="project-gallery">
+      <img src="./images/ma4ro3/Hospital Network/Server/Desktop_Wallpaper.png" alt="Wallpaper" onclick="openLightbox(this.src)">
+      <img src="./images/ma4ro3/Hospital Network/Server/Roaming_profile.png" alt="Roaming" onclick="openLightbox(this.src)">
+      <img src="./images/ma4ro3/Hospital Network/Server/Captive_Portal_Guests.png" alt="Policies" onclick="openLightbox(this.src)">
+</div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <img src="" alt="Zoomed Image" id="lightbox-img" />
+  </div>
+
+  <div style="text-align: center;">
+      <a href="index.html" class="back-button">Back to Portfolio</a>
+    </div>
+
+  <footer>
+    &copy; 2025 Pavly George – All Rights Reserved
+  </footer>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    }
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+  </script>
+</body>
+</html>
