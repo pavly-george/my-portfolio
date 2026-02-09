@@ -1,0 +1,674 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap');
+
+/* Background Image for Body */
+body {
+    background: url('./images/A_futuristic_server_room_with_glowing_neon_lights.png') no-repeat center center fixed; /* Add your background image */
+    background-size: cover; /* Cover the entire screen */
+    font-family: 'Roboto', sans-serif; /* Clean and modern font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Improved line height */
+    background-color: #000000;
+    color: #fff;
+}
+
+/* Animation Styles for Fade-In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+    }
+}
+
+.section {
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 0.8s ease forwards; /* Apply fade-in animation */
+}
+
+
+/* Hover effect for sections */
+section {
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+section:hover {
+    box-shadow: 0 4px 20px rgba(0, 255, 238, 0.5); /* Add a glowing shadow effect */
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(to right, #00FF66, #1abc9c); /* Attractive gradient */
+    color: #fff;
+    padding: 5px ;
+    padding-bottom: 38px;
+    text-align: center;
+}
+
+header h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-container h1 {
+    font-size: 3.8em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.header-container p {
+    font-size: 1.8em;
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 2px; /* Spacing between letters */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between menu items */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(15, 7, 7, 0.2); /* Semi-transparent hover effect */
+}
+
+/* Hamburger Style */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1101;
+}
+
+.hamburger span {
+    height: 4px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* When menu is open */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Nav Menu */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav#nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #1f1f1f;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+        z-index: 1100;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    nav#nav-menu.show {
+        display: flex;
+    }
+
+    nav#nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav#nav-menu li {
+        display: block;
+    }
+}
+
+
+/* About Me Section */
+#about {
+    background-color: rgba(0, 0, 0, 0.868); /* Slight transparency for overlay effect */
+    color: #e0e0e0;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.8em;
+    color: #00FF66;
+    margin-bottom: 20px;
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #00FF66;
+    color: #1f1f1f;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid #1abc9c; /* Adding a border to button */
+}
+
+.about-btn:hover {
+    background-color: #1abc9c;
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+/* About Me Image */
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 350px;
+    border-radius: 60%;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.6); /* Shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Skills & Certifications */
+#skills {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.738);
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2.8em;
+    color: #00FF66;
+    margin-bottom: 40px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+  
+.skill-category {
+    background-color: #2a2a2a;
+    border: 2px solid #00FF66;
+    border-radius: 10px;
+    padding: 25px;
+    width: 300px;
+    min-height: 260px;
+    box-shadow: 0 6px 15px rgba(0, 255, 238, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+  
+  .skill-category.enlarged {
+    width: 320px;
+  }
+
+  .skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 255, 238, 0.4);
+}
+
+.skill-category h3 {
+    text-align: center;
+    color: #00FF66;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.skill-category li {
+    padding: 8px 0;
+    font-size: 1.2em;
+    color: #e0e0e0;
+    text-align: left;
+}
+
+  
+.lang-level {
+    font-weight: bold;
+    color: #1abc9c; /* turquoise professional color */
+  }
+
+  /* Languages Section with Dots */
+.skill-category.languages li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-category.languages .dots {
+    display: flex;
+    gap: 5px;
+}
+
+.skill-category.languages .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #444;
+}
+
+.skill-category.languages .dot.filled {
+    background-color: #00FF66;
+}
+
+/* Projects Section */
+#projects {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.868);
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.8em;
+    color: #00FF66;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.project {
+    background-color: #2a2a2a; /* Dark background */
+    border: 2px solid #00FF66; /* Green border */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s ease-in-out; /* Smooth hover transition */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Initial shadow */
+}
+
+.project:hover {
+    transform: scale(1.05); /* Slight scale-up on hover */
+    box-shadow: 0 8px 20px rgba(0, 255, 238, 0.7); /* Larger glowing shadow on hover */
+}
+
+/* Project Images */
+.project-img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for image hover */
+}
+
+/* Hover Effect for Project Images */
+.project-img:hover {
+    transform: scale(1.1); /* Slight scale-up of image on hover */
+}
+
+/* Project Titles */
+.project h3 {
+    color: #00FF66;
+    margin-bottom: 10px;
+}
+
+/* Project Descriptions */
+.project p {
+    color: #ffffff;
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Button Styles */
+.details-btn {
+    background-color: #00FF66;
+    color: #1e1e1e;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #1abc9c; /* Change button color on hover */
+}
+
+/* Learning Journey Section */
+#learning-journey {
+    padding: 40px;
+    text-align: center;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+#learning-journey h2 {
+    font-size: 2.5em;
+    color: #00FF66;
+    margin-bottom: 20px;
+}
+
+.journey {
+    background-color: #2a2a2a;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.journey:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 255, 238, 0.7);
+}
+
+.journey h3 {
+    color: #00FF66;
+    margin-bottom: 10px;
+}
+
+.journey p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+#contact {
+    background-color: rgba(30, 30, 30, 0.9); /* Dark background for contrast */
+    padding: 40px; /* Adequate padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    max-width: 600px; /* Max width for better layout */
+    margin: 0 auto; /* Center the section */
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* General Styles for Contact Section */
+.contact-section {
+    background-color: rgba(30, 30, 30, 0.8); /* Slightly transparent background for contrast */
+    padding: 40px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    max-width: 600px; /* Max width for the form */
+    margin: auto; /* Center the form */
+    color: #ffffff; /* White text color for contrast */
+}
+
+/* Header Styles */
+.contact-section h2 {
+    text-align: center; /* Centered heading */
+    color: #00FF66; /* Green color for heading */
+    margin-bottom: 20px; /* Spacing below heading */
+}
+
+/* Label Styles */
+label {
+    display: block; /* Each label takes a full line */
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Bold text for labels */
+}
+
+/* Input and Textarea Styles */
+input, textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 12px; /* Padding for comfort */
+    margin-bottom: 15px; /* Space below each input */
+    border: 2px solid #00FF66; /* Green border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #1e1e1e; /* Dark background for inputs */
+    color: #ffffff; /* White text */
+    font-size: 16px; /* Font size for readability */
+}
+
+/* Placeholder Styles */
+input::placeholder, textarea::placeholder {
+    color: #ccc; /* Light grey color for placeholders */
+}
+
+/* Button Styles */
+button {
+    background-color: #00FF66; /* Green background */
+    color: #1e1e1e; /* Dark text for contrast */
+    border: none; /* No border */
+    padding: 12px 20px; /* Padding for comfort */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for readability */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+    width: 100%; /* Full width button */
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #1abc9c; /* Darker green on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Connect with Me Section Styles */
+.contact-section p {
+    text-align: center; /* Centered text */
+    margin-top: 20px; /* Space above paragraphs */
+    color: #ffffff; /* White text for links */
+}
+
+.contact-section a {
+    color: #00FF66; /* Green color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Transition for color change */
+}
+
+.contact-section a:hover {
+    color: #1abc9c; /* Darker green on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
+    button {
+        padding: 10px; /* Reduced padding for smaller buttons */
+    }
+}
+
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em; /* Adjust header size for smaller screens */
+    }
+    .about-container {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center; /* Center the content */
+    }
+    .about-image img {
+        width: 250px; /* Smaller image on small screens */
+    }
+}
+/* General Responsive Layout for Smaller Screens */
+@media only screen and (max-width: 768px) {
+    /* Adjust container widths and font sizes for mobile */
+    .contact-section {
+        padding: 20px;
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    /* Adjust Heading Size */
+    h2 {
+        font-size: 1.8em; /* Slightly smaller heading */
+    }
+
+    /* Inputs and Textareas */
+    input, textarea {
+        font-size: 14px; /* Slightly smaller font */
+        padding: 10px; /* Smaller padding */
+    }
+
+    /* Adjust Button */
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Adjust layout for About Section */
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .about-image img {
+        width: 200px; /* Smaller image for mobile */
+    }
+
+    /* Adjust Navigation */
+    nav ul {
+        flex-direction: column;
+        gap: 15px; /* Smaller gaps between menu items */
+    }
+
+    nav ul li {
+        display: block; /* Stack navigation links vertically */
+    }
+
+    /* Adjust Projects Section */
+    .project-img {
+        max-width: 100%; /* Make images full width on smaller screens */
+    }
+
+    /* Adjust other section paddings */
+    section {
+        padding: 20px 10px;
+    }
+}
+
+/* For extra small screens (iPhones and small Android phones) */
+@media only screen and (max-width: 480px) {
+    h2 {
+        font-size: 1.6em; /* Smaller heading for very small screens */
+    }
+
+    /* Adjust text and padding for inputs and buttons */
+    input, textarea {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .about-image img {
+        width: 150px; /* Smaller image */
+    }
+
+    nav ul {
+        gap: 10px; /* Reduce gap further between menu items */
+    }
+
+    .contact-section {
+        padding: 15px;
+    }
+
+    /* Project Section Adjustments */
+    .project {
+        padding: 15px;
+        margin: 15px 0;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+    justify-content: center; /* Centering */
+    align-items: center; /* Centering */
+}
+
+.modal-content {
+    background-color: #2a2a2a;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #00FF66; /* Green border */
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #00FF66; /* Green color on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
